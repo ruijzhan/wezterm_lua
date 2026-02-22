@@ -49,6 +49,13 @@ table.insert(config.keys, {
   action = act.ActivateTabRelative(1),
 })
 
+-- F2 to spawn a new tab
+table.insert(config.keys, {
+  key = 'F2',
+  mods = 'NONE',
+  action = act.SpawnTab 'DefaultDomain',
+})
+
 -- F3/F4 to switch to previous/next tab
 table.insert(config.keys, {
   key = 'F3',
