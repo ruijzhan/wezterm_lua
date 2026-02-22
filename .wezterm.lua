@@ -13,8 +13,10 @@ config.initial_rows = 28
 -- or, changing the font size and color scheme.
 config.font = wezterm.font 'JetBrains Mono'
 config.font_size = 11
-config.color_scheme = 'Tokyo Night (Gogh)'
+config.color_scheme = ''
 
+config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = true
 -- Custom key bindings for tab switching
 local act = wezterm.action
 
@@ -44,6 +46,18 @@ table.insert(config.keys, {
 table.insert(config.keys, {
   key = 'RightArrow',
   mods = 'CTRL',
+  action = act.ActivateTabRelative(1),
+})
+
+-- F3/F4 to switch to previous/next tab
+table.insert(config.keys, {
+  key = 'F3',
+  mods = 'NONE',
+  action = act.ActivateTabRelative(-1),
+})
+table.insert(config.keys, {
+  key = 'F4',
+  mods = 'NONE',
   action = act.ActivateTabRelative(1),
 })
 
