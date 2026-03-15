@@ -17,6 +17,7 @@ config.color_scheme = ''
 
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = true
+config.audible_bell = 'Disabled'
 -- Custom key bindings for tab switching
 local act = wezterm.action
 
