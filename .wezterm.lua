@@ -50,6 +50,19 @@ table.insert(config.keys, {
   action = act.ActivateTabRelative(1),
 })
 
+-- F1 to rename current tab
+table.insert(config.keys, {
+  key = 'F1',
+  action = act.PromptInputLine {
+    description = 'Enter new name for tab',
+    action = wezterm.action_callback(function(window, pane, line)
+      if line then
+        window:active_tab():set_title(line)
+      end
+    end),
+  },
+})
+
 -- F2 to spawn a new tab
 table.insert(config.keys, {
   key = 'F2',
