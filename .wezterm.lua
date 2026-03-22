@@ -63,24 +63,14 @@ table.insert(config.keys, {
   },
 })
 
--- F2 to spawn a new tab
+-- Ctrl+N to spawn a new tab
 table.insert(config.keys, {
-  key = 'F2',
-  mods = 'NONE',
+  key = 'n',
+  mods = 'CTRL',
   action = act.SpawnTab 'DefaultDomain',
 })
 
--- F3/F4 to switch to previous/next tab
-table.insert(config.keys, {
-  key = 'F3',
-  mods = 'NONE',
-  action = act.ActivateTabRelative(-1),
-})
-table.insert(config.keys, {
-  key = 'F4',
-  mods = 'NONE',
-  action = act.ActivateTabRelative(1),
-})
+
 
 
 -- Set default program if Git Bash exists (check D: then C:)
